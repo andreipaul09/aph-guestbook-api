@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aph-guestbook-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SUPABASE_URL
+        value: https://npvzjokretciicpchwfp.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wdnpqb2tyZXRjaWljcGNod2ZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3NjY1MTUsImV4cCI6MjA4NzM0MjUxNX0.ACbGcPD9g_RJ1ZxEZZnv6OCMSnQCZmApHBsw_GFesG8
